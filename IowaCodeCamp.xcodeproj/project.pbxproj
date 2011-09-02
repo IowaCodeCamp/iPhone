@@ -33,6 +33,7 @@
 		5C7BDAE5140C454200D68D51 /* SessionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BDAE4140C454200D68D51 /* SessionService.m */; };
 		5C7BDAE8140C4CEF00D68D51 /* SessionDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BDAE7140C4CEF00D68D51 /* SessionDeserializer.m */; };
 		5CF06EA614105870008FD782 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF06EA514105870008FD782 /* Speaker.m */; };
+		5CF966141410699900426298 /* AsyncImageDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF966131410699900426298 /* AsyncImageDownload.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		5C7BDAE7140C4CEF00D68D51 /* SessionDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDeserializer.m; sourceTree = "<group>"; };
 		5CF06EA41410586F008FD782 /* Speaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speaker.h; sourceTree = "<group>"; };
 		5CF06EA514105870008FD782 /* Speaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speaker.m; sourceTree = "<group>"; };
+		5CF966121410699900426298 /* AsyncImageDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageDownload.h; sourceTree = "<group>"; };
+		5CF966131410699900426298 /* AsyncImageDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageDownload.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,7 @@
 		5C7BDAA8140C42C300D68D51 /* IowaCodeCamp */ = {
 			isa = PBXGroup;
 			children = (
+				5CF966101410698400426298 /* util */,
 				5C7BDAE9140C4EE600D68D51 /* lib */,
 				5C7BDADF140C434600D68D51 /* entity */,
 				5C7BDADE140C433C00D68D51 /* webservice */,
@@ -268,6 +272,15 @@
 				5C721F34140C503500641684 /* SBJsonWriter.m */,
 			);
 			name = lib;
+			sourceTree = "<group>";
+		};
+		5CF966101410698400426298 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				5CF966121410699900426298 /* AsyncImageDownload.h */,
+				5CF966131410699900426298 /* AsyncImageDownload.m */,
+			);
+			name = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,6 +402,7 @@
 				5C1D6326140C5206008D0E91 /* Session.m in Sources */,
 				5C4C0911140C76C2004DC085 /* SessionDetails.m in Sources */,
 				5CF06EA614105870008FD782 /* Speaker.m in Sources */,
+				5CF966141410699900426298 /* AsyncImageDownload.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

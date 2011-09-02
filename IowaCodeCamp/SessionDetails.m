@@ -1,16 +1,14 @@
-//
-//  SessionDetails.m
-//  IowaCodeCamp
-//
-//  Created by Shelene Billups on 8/29/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import "SessionDetails.h"
+#import "AsyncImageDownload.h"
 #import "Speaker.h"
 
 @implementation SessionDetails
 @synthesize selectedSession;
+@synthesize lblSessionDesc;
+@synthesize lblSessionTime;
+@synthesize lblSpeakerName;
+@synthesize lblSessionTitle;
+@synthesize imgSpeaker;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,7 +37,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    Speaker* speaker = [selectedSession speaker];
+    lblSessionTitle.text = [selectedSession session];
+    lblSessionDesc.text = [selectedSession desc];
+    lblSessionTime.text = [selectedSession time];
+    lblSpeakerName.text = [speaker name];
+    
+    NSString* imgUrl = [NSString stringWithFormat:@"http://iowacodecamp.com/public/images/speakers/%@", [speaker img]];
+    
+    AsyncImageDownload* asyncImg = [[AsyncImageDownload alloc] init];
+    [asyncImg loadImageFromURL:imgUrl :nil :self :nil];
+}
+
+- (void) setImageForGivenIndexPath:(UIImage *)img:(NSIndexPath *)indexInfo:(UIImageView *)imgview
+{
+    imgSpeaker.frame = CGRectMake(20, 47, 106, 165);
+    [imgSpeaker setImage:img];
 }
 
 - (void)viewDidUnload
