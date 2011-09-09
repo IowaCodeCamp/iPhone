@@ -14,13 +14,8 @@
 
 - (void)didReceiveMemoryWarning
 {
-    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
-
-#pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
@@ -45,17 +40,13 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-//table view below
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {    
     return [groupIndex count];
 }
@@ -86,18 +77,24 @@
 	if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SessionDetails"] autorelease];
         
-//        UIView* detailsView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 290, 99)];
-//        //detailsView.tag = 14;
-//        
-//        UILabel* movieTitle = [[UILabel alloc] initWithFrame:CGRectMake(75, 6, 210, 35)];
-//        movieTitle.font = [UIFont boldSystemFontOfSize:21.0];
-//        movieTitle.tag = 16;
-//        [detailsView addSubview:movieTitle];
-//        [movieTitle release];
-//        
-//        [cell.contentView addSubview:detailsView];
-//        
-//        [detailsView release];
+        UIView* detailsView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 310, 99)];
+        
+        UILabel* sessionName = [[UILabel alloc] initWithFrame:CGRectMake(5, -5, 310, 35)];
+        sessionName.font = [UIFont boldSystemFontOfSize:14.0];
+        sessionName.tag = 16;
+        [detailsView addSubview:sessionName];
+        [sessionName release];
+        
+        UILabel* speakerName = [[UILabel alloc] initWithFrame:CGRectMake(5, 24, 310, 15)];
+        speakerName.font = [UIFont systemFontOfSize:12.0];
+        speakerName.tag = 17;
+        speakerName.textColor = [UIColor grayColor];
+        [detailsView addSubview:speakerName];
+        [speakerName release];
+        
+        [cell.contentView addSubview:detailsView];
+        
+        [detailsView release];
 	}
     
     NSString *time = [groupIndex objectAtIndex:[indexPath section]];
@@ -106,21 +103,15 @@
     
     if ([sessionz count] > 0) {
         Session* obj = [sessionz objectAtIndex: [indexPath row]];
-        NSString* session = [[NSString alloc] initWithFormat:@"%@", obj.session];
-        cell.text = session;
         
-        //UILabel* movieTitle = [cell viewWithTag:16];
-        //movieTitle.text = time;
+        UILabel* sessionName = [cell viewWithTag:16];
+        sessionName.text = obj.session;
         
-        //[movieTitle release];
+        UILabel* released = [cell viewWithTag:17];
+        released.text = obj.speaker.name;
     }
     
 	return cell;  
-}
-
-- (Session *) objForIndexPath:(NSIndexPath *)indexPath
-{
-        return [sessions objectAtIndex:[indexPath row]];
 }
 
 - (Session *) objForIndexedGroup:(NSIndexPath *)indexPath
