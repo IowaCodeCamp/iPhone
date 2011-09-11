@@ -7,7 +7,7 @@
     IBOutlet UILabel* lblSessionTitle;
     IBOutlet UILabel* lblSpeakerName;
     IBOutlet UILabel* lblSessionTime;
-    IBOutlet UILabel* lblSessionDesc;
+    IBOutlet UITextView* txtSessionDesc;
     IBOutlet UIImageView* imgSpeaker;
 }
 
@@ -15,7 +15,7 @@
 @property (nonatomic, retain) UILabel* lblSessionTitle;
 @property (nonatomic, retain) UILabel* lblSpeakerName;
 @property (nonatomic, retain) UILabel* lblSessionTime;
-@property (nonatomic, retain) UILabel* lblSessionDesc;
+@property (nonatomic, retain) UITextView* txtSessionDesc;
 @property (nonatomic, retain) UIImageView* imgSpeaker;
 
 @end

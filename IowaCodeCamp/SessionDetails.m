@@ -4,11 +4,11 @@
 
 @implementation SessionDetails
 @synthesize selectedSession;
-@synthesize lblSessionDesc;
 @synthesize lblSessionTime;
 @synthesize lblSpeakerName;
 @synthesize lblSessionTitle;
 @synthesize imgSpeaker;
+@synthesize txtSessionDesc;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,7 +40,7 @@
     
     Speaker* speaker = [selectedSession speaker];
     lblSessionTitle.text = [selectedSession session];
-    lblSessionDesc.text = [selectedSession desc];
+    txtSessionDesc.text = [selectedSession desc];
     lblSessionTime.text = [selectedSession time];
     lblSpeakerName.text = [speaker name];
     
@@ -52,7 +52,7 @@
 
 - (void) setImageForGivenIndexPath:(UIImage *)img:(NSIndexPath *)indexInfo:(UIImageView *)imgview
 {
-    imgSpeaker.frame = CGRectMake(20, 85, 90, 117);
+    imgSpeaker.frame = CGRectMake(5, 41, 90, 117);
     [imgSpeaker setImage:img];
 }
 
