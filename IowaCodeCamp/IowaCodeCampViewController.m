@@ -3,6 +3,11 @@
 #import "Session.h"
 #import "IowaCodeCampAppDelegate.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @implementation IowaCodeCampViewController
 @synthesize sessions;
 @synthesize groupIndex;
@@ -20,6 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     SessionService* service = [[SessionService alloc] initWithViewController:self];
     [service getListOfSessions];
 }
@@ -28,11 +34,11 @@
     [self indexEachSessionByTime:list];
     self.sessions = list;
     
-    [appDelegate newReleasesJsonFinished];
+    [appDelegate sessionJsonFinished];
 }
 
 - (void) refreshDisplay {
-	[newReleasesTableView reloadData];
+	[sessionsTableView reloadData];
     
     [self dismissModalViewControllerAnimated:NO];
 }
@@ -71,8 +77,30 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 16.0; //the actual height value is set in the interface builder option => this is simply a reminder to set it there :)
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    NSString *sectionTitle = [self tableView:tableView titleForHeaderInSection:section];
+    if (sectionTitle == nil) {
+        return nil;
+    }
+    
+	UILabel* headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    headerLabel.backgroundColor = [UIColorFromRGB(0x838E00) colorWithAlphaComponent:0.8];
+	headerLabel.font = [UIFont boldSystemFontOfSize:12];
+	headerLabel.frame = CGRectMake(0.0, 0.0, 320.0, 16.0);
+	headerLabel.text = [NSString stringWithFormat:@" %@", sectionTitle];
+    
+    [headerLabel autorelease];
+    
+	return headerLabel;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SessionDetails"];
+	UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"SessionDetails"];
     
 	if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SessionDetails"] autorelease];

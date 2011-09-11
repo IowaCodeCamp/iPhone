@@ -4,7 +4,6 @@
 @class SessionDetails;
 @class Session;
 
-
 @interface IowaCodeCampAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow* window;
     IowaCodeCampViewController *viewController;
@@ -16,7 +15,7 @@
 @property (nonatomic, retain) IBOutlet IowaCodeCampViewController *viewController;
 @property (nonatomic, retain) SessionDetails *detailsController;
 
-- (void)newReleasesJsonFinished;
+- (void)sessionJsonFinished;
 - (void)showSessionDetailsView:(Session *)session;
 
 @end

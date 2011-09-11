@@ -2,6 +2,11 @@
 #import "IowaCodeCampViewController.h"
 #import "SessionDetails.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor \
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @implementation IowaCodeCampAppDelegate
 @synthesize window;
 @synthesize viewController;
@@ -9,6 +14,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [viewController setTitle:@"Iowa Code Camp"];
     navController.viewControllers = [NSArray arrayWithObject:viewController];
     
     [window addSubview:navController.view];
@@ -16,19 +22,18 @@
     return YES;
 }
 
-- (void)newReleasesJsonFinished
+- (void)sessionJsonFinished
 {
     [viewController refreshDisplay];
 }
 
 - (void)showSessionDetailsView:(Session *)session {
-    if (detailsController) 
-    { [detailsController release]; } // assuming you've got a retain on it.
+    if (detailsController) { [detailsController release]; }
+    
     detailsController = [[SessionDetails alloc] init];
     
     [detailsController setSelectedSession:session];
-//    [detailsController setAppDelegate:self];
-//    [detailsController setTitle:@"Movie Details"];
+    [detailsController setTitle:@"Session Details"];
     
     [navController pushViewController:detailsController animated:YES];
 }
@@ -79,4 +84,14 @@
     [super dealloc];
 }
 
+@end
+
+@implementation UINavigationBar (UINavigationBarCategory)
+- (void)drawRect:(CGRect)rect {
+    UIColor *color = UIColorFromRGB(0xFF9200);
+    CGContextRef* context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColor(context, CGColorGetComponents([color CGColor]));
+    CGContextFillRect(context, rect);
+    self.tintColor = color;
+}
 @end

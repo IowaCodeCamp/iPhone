@@ -52,7 +52,7 @@
 
 - (void) setImageForGivenIndexPath:(UIImage *)img:(NSIndexPath *)indexInfo:(UIImageView *)imgview
 {
-    imgSpeaker.frame = CGRectMake(20, 47, 106, 165);
+    imgSpeaker.frame = CGRectMake(20, 85, 90, 117);
     [imgSpeaker setImage:img];
 }
 

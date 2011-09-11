@@ -6,7 +6,7 @@
 @interface IowaCodeCampViewController : UIViewController<UITableViewDataSource, UITableViewDelegate> {
     NSArray* sessions;
     NSArray* groupIndex;
-    IBOutlet UITableView* newReleasesTableView;
+    IBOutlet UITableView* sessionsTableView;
     IBOutlet IowaCodeCampAppDelegate* appDelegate;
 }
 
@@ -16,7 +16,6 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
-- (Session *) objForIndexPath:(NSIndexPath *)indexPath;
 - (Session *) objForIndexedGroup:(NSIndexPath *)indexPath;
 - (void) callbackWithListOfSessions:(NSArray *)list;
 - (void) refreshDisplay;
