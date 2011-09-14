@@ -5,6 +5,7 @@
 @synthesize time;
 @synthesize session;
 @synthesize desc;
+@synthesize room;
 @synthesize speaker;
 
 - (NSString *)description {
@@ -16,6 +17,7 @@
     [session release];
     [desc release];
     [speaker release];
+    [room release];
     [super dealloc];
 }
 

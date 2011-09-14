@@ -33,9 +33,14 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     detailsController = [[SessionDetails alloc] init];
     
     [detailsController setSelectedSession:session];
+    //[detailsController setAppDelegate:self];
     [detailsController setTitle:@"Session Details"];
     
     [navController pushViewController:detailsController animated:YES];
+}
+
+- (void)launchSpeakerDetailsView {
+    NSLog(@"joy");
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

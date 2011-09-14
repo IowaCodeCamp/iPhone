@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5C1D6326140C5206008D0E91 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1D6325140C5206008D0E91 /* Session.m */; };
+		5C2A705B1420251700047F1C /* SpeakerDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A70591420251700047F1C /* SpeakerDetails.m */; };
+		5C2A705C1420251700047F1C /* SpeakerDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C2A705A1420251700047F1C /* SpeakerDetails.xib */; };
 		5C4C0911140C76C2004DC085 /* SessionDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C090F140C76C2004DC085 /* SessionDetails.m */; };
 		5C4C0912140C76C2004DC085 /* SessionDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C4C0910140C76C2004DC085 /* SessionDetails.xib */; };
 		5C721F35140C503500641684 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C721F2C140C503500641684 /* NSObject+SBJSON.m */; };
@@ -49,6 +51,9 @@
 /* Begin PBXFileReference section */
 		5C1D6324140C5206008D0E91 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
 		5C1D6325140C5206008D0E91 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		5C2A70581420251700047F1C /* SpeakerDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerDetails.h; sourceTree = "<group>"; };
+		5C2A70591420251700047F1C /* SpeakerDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerDetails.m; sourceTree = "<group>"; };
+		5C2A705A1420251700047F1C /* SpeakerDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerDetails.xib; sourceTree = "<group>"; };
 		5C4C090E140C76C2004DC085 /* SessionDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDetails.h; sourceTree = "<group>"; };
 		5C4C090F140C76C2004DC085 /* SessionDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDetails.m; sourceTree = "<group>"; };
 		5C4C0910140C76C2004DC085 /* SessionDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionDetails.xib; sourceTree = "<group>"; };
@@ -211,6 +216,8 @@
 				5C7BDAB8140C42C300D68D51 /* IowaCodeCampViewController.m */,
 				5C4C090E140C76C2004DC085 /* SessionDetails.h */,
 				5C4C090F140C76C2004DC085 /* SessionDetails.m */,
+				5C2A70581420251700047F1C /* SpeakerDetails.h */,
+				5C2A70591420251700047F1C /* SpeakerDetails.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -218,6 +225,7 @@
 		5C7BDADC140C42F200D68D51 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				5C2A705A1420251700047F1C /* SpeakerDetails.xib */,
 				5C4C0910140C76C2004DC085 /* SessionDetails.xib */,
 				5C7BDAB4140C42C300D68D51 /* MainWindow.xib */,
 				5C7BDABA140C42C300D68D51 /* IowaCodeCampViewController.xib */,
@@ -354,6 +362,7 @@
 				5C7BDAB6140C42C300D68D51 /* MainWindow.xib in Resources */,
 				5C7BDABC140C42C300D68D51 /* IowaCodeCampViewController.xib in Resources */,
 				5C4C0912140C76C2004DC085 /* SessionDetails.xib in Resources */,
+				5C2A705C1420251700047F1C /* SpeakerDetails.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +412,7 @@
 				5C4C0911140C76C2004DC085 /* SessionDetails.m in Sources */,
 				5CF06EA614105870008FD782 /* Speaker.m in Sources */,
 				5CF966141410699900426298 /* AsyncImageDownload.m in Sources */,
+				5C2A705B1420251700047F1C /* SpeakerDetails.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

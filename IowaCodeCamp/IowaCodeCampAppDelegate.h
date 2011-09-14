@@ -17,5 +17,6 @@
 
 - (void)sessionJsonFinished;
 - (void)showSessionDetailsView:(Session *)session;
+- (void)launchSpeakerDetailsView;
 
 @end

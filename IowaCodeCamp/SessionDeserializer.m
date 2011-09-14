@@ -16,6 +16,7 @@
         [session setSession:[item objectForKey:@"session"]];
         [session setTime:[item objectForKey:@"time"]];
         [session setDesc:[item objectForKey:@"desc"]];
+        [session setRoom:[item objectForKey:@"room"]];
         
         NSDictionary *spkr = [item objectForKey:@"speaker"];
         NSString* name = [spkr objectForKey:@"name"];

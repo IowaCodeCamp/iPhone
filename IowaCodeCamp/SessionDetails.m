@@ -1,5 +1,6 @@
 #import "SessionDetails.h"
 #import "AsyncImageDownload.h"
+#import "IowaCodeCampAppDelegate.h"
 #import "Speaker.h"
 
 @implementation SessionDetails
@@ -7,6 +8,7 @@
 @synthesize lblSessionTime;
 @synthesize lblSpeakerName;
 @synthesize lblSessionTitle;
+@synthesize lblRoom;
 @synthesize imgSpeaker;
 @synthesize txtSessionDesc;
 
@@ -42,6 +44,7 @@
     lblSessionTitle.text = [selectedSession session];
     txtSessionDesc.text = [selectedSession desc];
     lblSessionTime.text = [selectedSession time];
+    lblRoom.text = [selectedSession room];
     lblSpeakerName.text = [speaker name];
     
     NSString* imgUrl = [NSString stringWithFormat:@"http://iowacodecamp.com/public/images/speakers/%@", [speaker img]];
@@ -54,6 +57,10 @@
 {
     imgSpeaker.frame = CGRectMake(5, 41, 90, 117);
     [imgSpeaker setImage:img];
+}
+
+- (IBAction) showSpeakerDetails: (id) sender {
+    [appDelegate launchSpeakerDetailsView];
 }
 
 - (void)viewDidUnload
