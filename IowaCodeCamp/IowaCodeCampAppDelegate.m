@@ -1,6 +1,9 @@
 #import "IowaCodeCampAppDelegate.h"
 #import "IowaCodeCampViewController.h"
 #import "SessionDetails.h"
+#import "SpeakerDetails.h"
+#import "Session.h"
+#import "Speaker.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor \
 colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
@@ -11,6 +14,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @synthesize window;
 @synthesize viewController;
 @synthesize detailsController;
+@synthesize speakerDetailsController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -33,14 +37,21 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     detailsController = [[SessionDetails alloc] init];
     
     [detailsController setSelectedSession:session];
-    //[detailsController setAppDelegate:self];
+    [detailsController setAppDelegate:self];
     [detailsController setTitle:@"Session Details"];
     
     [navController pushViewController:detailsController animated:YES];
 }
 
-- (void)launchSpeakerDetailsView {
-    NSLog(@"joy");
+- (void)launchSpeakerDetailsView:(Speaker *)speaker {
+    if (speakerDetailsController) { [speakerDetailsController release]; }
+    
+    speakerDetailsController = [[SpeakerDetails alloc] init];
+    
+    [speakerDetailsController setSelectedSpeaker:speaker];
+    [speakerDetailsController setTitle:@"Speaker Details"];
+    
+    [navController pushViewController:speakerDetailsController animated:YES];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -86,6 +97,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 {
     [window release];
     [viewController release];
+    [speakerDetailsController release];
     [super dealloc];
 }
 
@@ -94,7 +106,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @implementation UINavigationBar (UINavigationBarCategory)
 - (void)drawRect:(CGRect)rect {
     UIColor *color = UIColorFromRGB(0xFF9200);
-    CGContextRef* context = UIGraphicsGetCurrentContext();
+    CGContextRef* context = (CGContextRef*) UIGraphicsGetCurrentContext();
     CGContextSetFillColor(context, CGColorGetComponents([color CGColor]));
     CGContextFillRect(context, rect);
     self.tintColor = color;

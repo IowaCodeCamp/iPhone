@@ -5,13 +5,13 @@
 
 @interface IowaCodeCampViewController : UIViewController<UITableViewDataSource, UITableViewDelegate> {
     NSArray* sessions;
-    NSArray* groupIndex;
+    NSMutableArray* groupIndex;
     IBOutlet UITableView* sessionsTableView;
     IBOutlet IowaCodeCampAppDelegate* appDelegate;
 }
 
 @property (nonatomic, retain) NSArray* sessions;
-@property (nonatomic, retain) NSArray* groupIndex;
+@property (nonatomic, retain) NSMutableArray* groupIndex;
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;

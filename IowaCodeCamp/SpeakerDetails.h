@@ -1,16 +1,21 @@
-//
-//  SpeakerDetails.h
-//  IowaCodeCamp
-//
-//  Created by Shelene Billups on 9/13/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
+@class Speaker;
 
 @interface SpeakerDetails : UIViewController {
-    
+    Speaker* selectedSpeaker;  
+    IBOutlet UILabel* lblSpeakerName;
+    IBOutlet UILabel* lblSpeakerUri;
+    IBOutlet UILabel* lblSpeakerLocation;
+    IBOutlet UIImageView* imgSpeaker;
+    IBOutlet UITextView* txtSpeakerBio;
 }
+
+@property (nonatomic, retain) Speaker* selectedSpeaker;
+@property (nonatomic, retain) UILabel* lblSpeakerName;
+@property (nonatomic, retain) UILabel* lblSpeakerUri;
+@property (nonatomic, retain) UILabel* lblSpeakerLocation;
+@property (nonatomic, retain) UIImageView* imgSpeaker;
+@property (nonatomic, retain) UITextView* txtSpeakerBio;
 
 @end

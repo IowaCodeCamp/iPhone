@@ -1,6 +1,7 @@
 #import "SessionDeserializer.h"
 #import "Session.h"
 #import "Speaker.h"
+#import "JSON.h"
 
 @implementation SessionDeserializer
 

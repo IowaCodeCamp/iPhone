@@ -7,11 +7,11 @@
 @synthesize connection;
 @synthesize imgview;
 
-- (void) loadImageFromURL:(NSString *)urlStr:(NSIndexPath *)indexInfo:(UIViewController *)vwController:(UIImageView *)imgview
+- (void) loadImageFromURL:(NSString *)urlStr:(NSIndexPath *)indexInfo:(UIViewController *)vwController:(UIImageView *)imagview
 {
     self.viewController = vwController;
     self.indexPath = indexInfo;
-    self.imgview = imgview;
+    self.imgview = imagview;
     if (connection!=nil) { [connection release]; }
     if (data!=nil) { [data release]; }
     NSURL* url = [NSURL URLWithString:urlStr];

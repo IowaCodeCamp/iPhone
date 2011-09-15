@@ -28,6 +28,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     
     SessionService* service = [[SessionService alloc] initWithViewController:self];
     [service getListOfSessions];
+    
+    [service autorelease];
 }
 
 - (void) callbackWithListOfSessions:(NSArray *)list {
@@ -132,10 +134,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     if ([sessionz count] > 0) {
         Session* obj = [sessionz objectAtIndex: [indexPath row]];
         
-        UILabel* sessionName = [cell viewWithTag:16];
+        UILabel* sessionName = (UILabel*) [cell viewWithTag:16];
         sessionName.text = obj.session;
         
-        UILabel* released = [cell viewWithTag:17];
+        UILabel* released = (UILabel*) [cell viewWithTag:17];
         released.text = obj.speaker.name;
     }
     

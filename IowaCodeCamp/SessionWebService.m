@@ -1,4 +1,6 @@
 #import "SessionWebService.h"
+#import "SessionService.h"
+#import "JSON.h"
 
 @implementation SessionWebService
 @synthesize service;
@@ -9,12 +11,12 @@
     return [self initWithSessionService:nil];
 }
 
-- (id) initWithSessionService:(SessionService *)service
+- (id) initWithSessionService:(SessionService *)svc
 {
     if (self == [super init])
     {
         responseData = [NSMutableData new];
-        self.service = service;
+        self.service = svc;
     }
     return self;
 }

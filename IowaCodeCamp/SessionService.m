@@ -12,13 +12,13 @@
     return [self initWithViewController:nil];
 }
 
-- (id) initWithViewController:(UIViewController *)viewController
+- (id) initWithViewController:(UIViewController *)vwController
 {
     if (self == [super init])
     {
         self.service = [[SessionWebService alloc] initWithSessionService:self];
         self.deserializer = [[SessionDeserializer alloc] init];
-        self.viewController = viewController;
+        self.viewController = vwController;
     }
     return self;
 }

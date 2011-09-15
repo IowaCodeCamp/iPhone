@@ -1,6 +1,7 @@
 #import "SessionDetails.h"
 #import "AsyncImageDownload.h"
 #import "IowaCodeCampAppDelegate.h"
+#import "Session.h"
 #import "Speaker.h"
 
 @implementation SessionDetails
@@ -11,6 +12,7 @@
 @synthesize lblRoom;
 @synthesize imgSpeaker;
 @synthesize txtSessionDesc;
+@synthesize appDelegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,16 +53,18 @@
     
     AsyncImageDownload* asyncImg = [[AsyncImageDownload alloc] init];
     [asyncImg loadImageFromURL:imgUrl :nil :self :nil];
+    
+    [asyncImg autorelease];
 }
 
 - (void) setImageForGivenIndexPath:(UIImage *)img:(NSIndexPath *)indexInfo:(UIImageView *)imgview
 {
-    imgSpeaker.frame = CGRectMake(5, 41, 90, 117);
+    imgSpeaker.frame = CGRectMake(5, 43, 90, 117);
     [imgSpeaker setImage:img];
 }
 
 - (IBAction) showSpeakerDetails: (id) sender {
-    [appDelegate launchSpeakerDetailsView];
+    [appDelegate launchSpeakerDetailsView:[selectedSession speaker]];
 }
 
 - (void)viewDidUnload

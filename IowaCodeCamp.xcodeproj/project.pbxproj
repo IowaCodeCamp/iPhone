@@ -165,6 +165,7 @@
 		5C7BDAA8140C42C300D68D51 /* IowaCodeCamp */ = {
 			isa = PBXGroup;
 			children = (
+				5C87B4F1142178210038FF4F /* delegate */,
 				5CF966101410698400426298 /* util */,
 				5C7BDAE9140C4EE600D68D51 /* lib */,
 				5C7BDADF140C434600D68D51 /* entity */,
@@ -172,8 +173,6 @@
 				5C7BDADD140C433000D68D51 /* service */,
 				5C7BDADC140C42F200D68D51 /* views */,
 				5C7BDADB140C42D800D68D51 /* controllers */,
-				5C7BDAB1140C42C300D68D51 /* IowaCodeCampAppDelegate.h */,
-				5C7BDAB2140C42C300D68D51 /* IowaCodeCampAppDelegate.m */,
 				5C7BDAA9140C42C300D68D51 /* Supporting Files */,
 			);
 			path = IowaCodeCamp;
@@ -280,6 +279,15 @@
 				5C721F34140C503500641684 /* SBJsonWriter.m */,
 			);
 			name = lib;
+			sourceTree = "<group>";
+		};
+		5C87B4F1142178210038FF4F /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BDAB1140C42C300D68D51 /* IowaCodeCampAppDelegate.h */,
+				5C7BDAB2140C42C300D68D51 /* IowaCodeCampAppDelegate.m */,
+			);
+			name = delegate;
 			sourceTree = "<group>";
 		};
 		5CF966101410698400426298 /* util */ = {

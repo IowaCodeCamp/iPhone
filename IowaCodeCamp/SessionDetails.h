@@ -14,6 +14,7 @@
     IBOutlet IowaCodeCampAppDelegate* appDelegate;
 }
 
+@property (nonatomic, retain) IowaCodeCampAppDelegate* appDelegate;
 @property (nonatomic, retain) Session* selectedSession;
 @property (nonatomic, retain) UILabel* lblSessionTitle;
 @property (nonatomic, retain) UILabel* lblSpeakerName;
