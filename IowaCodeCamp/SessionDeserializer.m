@@ -24,12 +24,16 @@
         NSString* title = [spkr objectForKey:@"title"];
         NSString* bio = [spkr objectForKey:@"bio"];
         NSString* img = [spkr objectForKey:@"img"];
+        NSString* web = [spkr objectForKey:@"web"];
+        NSString* location = [spkr objectForKey:@"location"];
         
         Speaker* speaker = [[Speaker alloc] init];
         [speaker setName:name];
         [speaker setTitle:title];
         [speaker setBio:bio];
         [speaker setImg:img];
+        [speaker setWeb:web];
+        [speaker setLocation:location];
         
         [session setSpeaker:speaker];
         

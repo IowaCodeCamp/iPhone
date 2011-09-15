@@ -39,8 +39,8 @@
     [super viewDidLoad];
     
     lblSpeakerName.text = [selectedSpeaker name];
-    lblSpeakerUri.text = @"http://twitter.com/toranb";
-    lblSpeakerLocation.text = @"Des Moines, IA";
+    lblSpeakerUri.text = [selectedSpeaker web];
+    lblSpeakerLocation.text = [selectedSpeaker location];
     txtSpeakerBio.text = [selectedSpeaker bio];
     
     NSString* imgUrl = [NSString stringWithFormat:@"http://iowacodecamp.com/public/images/speakers/%@", [selectedSpeaker img]];
