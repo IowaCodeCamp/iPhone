@@ -2,6 +2,7 @@
 #import "SessionService.h"
 #import "Session.h"
 #import "IowaCodeCampAppDelegate.h"
+#import "AddModalDialog.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor \
 colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
@@ -26,6 +27,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 {
     [super viewDidLoad];
     
+    [AddModalDialog buildModalDialogWithTextForView:@"loading" :self];
+    
     SessionService* service = [[SessionService alloc] initWithViewController:self];
     [service getListOfSessions];
     
@@ -33,6 +36,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 }
 
 - (void) callbackWithListOfSessions:(NSArray *)list {
+    [AddModalDialog removeModalDialogForView:self];
+    
     [self indexEachSessionByTime:list];
     self.sessions = list;
     
