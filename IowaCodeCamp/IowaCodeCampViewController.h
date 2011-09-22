@@ -5,13 +5,13 @@
 
 @interface IowaCodeCampViewController : UIViewController<UITableViewDataSource, UITableViewDelegate> {
     NSArray* sessions;
-    NSMutableArray* groupIndex;
+    NSArray* groupIndex;
     IBOutlet UITableView* sessionsTableView;
     IBOutlet IowaCodeCampAppDelegate* appDelegate;
 }
 
 @property (nonatomic, retain) NSArray* sessions;
-@property (nonatomic, retain) NSMutableArray* groupIndex;
+@property (nonatomic, retain) NSArray* groupIndex;
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
@@ -20,5 +20,6 @@
 - (void) callbackWithListOfSessions:(NSArray *)list;
 - (void) refreshDisplay;
 - (void) indexEachSessionByTime:(NSArray *) sessionz;
+- (NSArray *) getListOfSessionsWithPredicate:(NSIndexPath *)indexPath;
 
 @end

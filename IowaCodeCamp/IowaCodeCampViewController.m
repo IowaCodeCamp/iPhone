@@ -3,6 +3,7 @@
 #import "Session.h"
 #import "IowaCodeCampAppDelegate.h"
 #import "AddModalDialog.h"
+#import "SessionOrganizer.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor \
 colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
@@ -69,10 +70,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSString *sessionTime = [groupIndex objectAtIndex:section];
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"time ==[c] %@", sessionTime];
-    NSArray* sessionz = [self.sessions filteredArrayUsingPredicate:predicate];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:section inSection:section];
+    NSArray* sessionz = [self getListOfSessionsWithPredicate:path];
     
     return [sessionz count];    
 }
@@ -132,9 +131,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         [detailsView release];
 	}
     
-    NSString *time = [groupIndex objectAtIndex:[indexPath section]];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"time ==[c] %@", time];
-    NSArray* sessionz = [self.sessions filteredArrayUsingPredicate:predicate];
+    NSArray* sessionz = [self getListOfSessionsWithPredicate:indexPath];
     
     if ([sessionz count] > 0) {
         Session* obj = [sessionz objectAtIndex: [indexPath row]];
@@ -151,35 +148,24 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 - (Session *) objForIndexedGroup:(NSIndexPath *)indexPath
 {
-    NSString *time = [groupIndex objectAtIndex:[indexPath section]];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"time ==[c] %@", time];
-    NSArray* sessionz = [self.sessions filteredArrayUsingPredicate:predicate];
+    NSArray* sessionz = [self getListOfSessionsWithPredicate:indexPath];
     
     return [sessionz objectAtIndex:[indexPath row]];
 }
 
+- (NSArray *) getListOfSessionsWithPredicate:(NSIndexPath *)indexPath {
+    NSString *time = [groupIndex objectAtIndex:[indexPath section]];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"time ==[c] %@", time];
+    NSArray* sessionz = [self.sessions filteredArrayUsingPredicate:predicate];
+    
+    return sessionz;
+}
+
 - (void) indexEachSessionByTime:(NSArray *) sessionz
 {
-    groupIndex = [[NSMutableArray alloc] init];
-    
-    for (int i=0; i<[sessionz count]; i++){
-        NSString* releaseDate = [[sessionz objectAtIndex:i] time];
-        if (i > 0) {
-            BOOL* alreadyExists = NO;
-            for (int z=0; z<[groupIndex count]; z++) {
-                NSString* currentReleased = [groupIndex objectAtIndex:z];
-                if ([currentReleased isEqualToString:releaseDate]) {
-                    alreadyExists = YES;
-                    break;
-                }
-            }
-            if (!alreadyExists) {
-                [groupIndex addObject:releaseDate]; 
-            }
-        }else {
-            [groupIndex addObject:releaseDate]; 
-        }
-    } 
+    SessionOrganizer* organizer = [[[SessionOrganizer alloc] init] autorelease];
+    NSArray* sessionList = [organizer sortAndGroupSessions:sessionz];
+    groupIndex = [[NSArray alloc] initWithArray:sessionList];
 }
 
 @end
