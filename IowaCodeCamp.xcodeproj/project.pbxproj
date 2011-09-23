@@ -34,6 +34,7 @@
 		5C7BDAE2140C44A100D68D51 /* SessionWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BDAE1140C44A100D68D51 /* SessionWebService.m */; };
 		5C7BDAE5140C454200D68D51 /* SessionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BDAE4140C454200D68D51 /* SessionService.m */; };
 		5C7BDAE8140C4CEF00D68D51 /* SessionDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BDAE7140C4CEF00D68D51 /* SessionDeserializer.m */; };
+		5C7DE3F8142C1AB30028A8AA /* SessionDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7DE3F7142C1AB30028A8AA /* SessionDateTransformer.m */; };
 		5C8269F8142BE9D4002C22BB /* SessionOrganizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8269F7142BE9D4002C22BB /* SessionOrganizer.m */; };
 		5C87B4F5142181C60038FF4F /* AddModalDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87B4F4142181C60038FF4F /* AddModalDialog.m */; };
 		5CF06EA614105870008FD782 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF06EA514105870008FD782 /* Speaker.m */; };
@@ -96,6 +97,8 @@
 		5C7BDAE4140C454200D68D51 /* SessionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionService.m; sourceTree = "<group>"; };
 		5C7BDAE6140C4CEF00D68D51 /* SessionDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDeserializer.h; sourceTree = "<group>"; };
 		5C7BDAE7140C4CEF00D68D51 /* SessionDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDeserializer.m; sourceTree = "<group>"; };
+		5C7DE3F6142C1AB30028A8AA /* SessionDateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDateTransformer.h; sourceTree = "<group>"; };
+		5C7DE3F7142C1AB30028A8AA /* SessionDateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDateTransformer.m; sourceTree = "<group>"; };
 		5C8269F6142BE9D4002C22BB /* SessionOrganizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionOrganizer.h; sourceTree = "<group>"; };
 		5C8269F7142BE9D4002C22BB /* SessionOrganizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionOrganizer.m; sourceTree = "<group>"; };
 		5C87B4F3142181C60038FF4F /* AddModalDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddModalDialog.h; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 				5CF06EA514105870008FD782 /* Speaker.m */,
 				5C8269F6142BE9D4002C22BB /* SessionOrganizer.h */,
 				5C8269F7142BE9D4002C22BB /* SessionOrganizer.m */,
+				5C7DE3F6142C1AB30028A8AA /* SessionDateTransformer.h */,
+				5C7DE3F7142C1AB30028A8AA /* SessionDateTransformer.m */,
 			);
 			name = entity;
 			sourceTree = "<group>";
@@ -433,6 +438,7 @@
 				5C2A705B1420251700047F1C /* SpeakerDetails.m in Sources */,
 				5C87B4F5142181C60038FF4F /* AddModalDialog.m in Sources */,
 				5C8269F8142BE9D4002C22BB /* SessionOrganizer.m in Sources */,
+				5C7DE3F8142C1AB30028A8AA /* SessionDateTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
