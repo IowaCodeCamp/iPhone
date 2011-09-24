@@ -4,6 +4,7 @@
 #import "IowaCodeCampAppDelegate.h"
 #import "AddModalDialog.h"
 #import "SessionOrganizer.h"
+#import "SpecialSessionIdentifier.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor \
 colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
@@ -11,8 +12,8 @@ green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @implementation IowaCodeCampViewController
-@synthesize sessions;
 @synthesize groupIndex;
+@synthesize sessions;
 
 - (void)dealloc
 {
@@ -79,12 +80,30 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Session* obj = [self objForIndexedGroup:indexPath];
     
-    [appDelegate showSessionDetailsView:obj];
+    SpecialSessionIdentifier* identifier = [[[SpecialSessionIdentifier alloc] init] autorelease];
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if ([identifier sessionNameRequiresSpecialTreatment:obj.session]) {
+        return;
+    }
+    
+    [appDelegate showSessionDetailsView:obj];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    Session* obj = [self objForIndexedGroup:indexPath];
+    SpecialSessionIdentifier* identifier = [[[SpecialSessionIdentifier alloc] init] autorelease];
+    
+    if ([identifier sessionNameRequiresSpecialTreatment:obj.session]) {
+        return 26.0f;
+    }
+    
+    return 44.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 16.0; //the actual height value is set in the interface builder option => this is simply a reminder to set it there :)
+    return 18.0; //the actual height value is set in the interface builder option => this is simply a reminder to set it there :)
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -96,8 +115,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     
 	UILabel* headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     headerLabel.backgroundColor = [UIColorFromRGB(0x838E00) colorWithAlphaComponent:0.8];
-	headerLabel.font = [UIFont boldSystemFontOfSize:12];
-	headerLabel.frame = CGRectMake(0.0, 0.0, 320.0, 16.0);
+	headerLabel.font = [UIFont boldSystemFontOfSize:14];
+	headerLabel.frame = CGRectMake(0.0, 0.0, 320.0, 18.0);
 	headerLabel.text = [NSString stringWithFormat:@" %@", sectionTitle];
     
     [headerLabel autorelease];
