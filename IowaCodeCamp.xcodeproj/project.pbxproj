@@ -10,6 +10,7 @@
 		5C1D6326140C5206008D0E91 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1D6325140C5206008D0E91 /* Session.m */; };
 		5C2A705B1420251700047F1C /* SpeakerDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A70591420251700047F1C /* SpeakerDetails.m */; };
 		5C2A705C1420251700047F1C /* SpeakerDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C2A705A1420251700047F1C /* SpeakerDetails.xib */; };
+		5C44CC51142E5A35007733F2 /* ConnectivityWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C44CC50142E5A35007733F2 /* ConnectivityWebService.m */; };
 		5C4C0911140C76C2004DC085 /* SessionDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C090F140C76C2004DC085 /* SessionDetails.m */; };
 		5C4C0912140C76C2004DC085 /* SessionDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C4C0910140C76C2004DC085 /* SessionDetails.xib */; };
 		5C721F35140C503500641684 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C721F2C140C503500641684 /* NSObject+SBJSON.m */; };
@@ -58,6 +59,8 @@
 		5C2A70581420251700047F1C /* SpeakerDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerDetails.h; sourceTree = "<group>"; };
 		5C2A70591420251700047F1C /* SpeakerDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerDetails.m; sourceTree = "<group>"; };
 		5C2A705A1420251700047F1C /* SpeakerDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerDetails.xib; sourceTree = "<group>"; };
+		5C44CC4F142E5A35007733F2 /* ConnectivityWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectivityWebService.h; sourceTree = "<group>"; };
+		5C44CC50142E5A35007733F2 /* ConnectivityWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectivityWebService.m; sourceTree = "<group>"; };
 		5C4C090E140C76C2004DC085 /* SessionDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDetails.h; sourceTree = "<group>"; };
 		5C4C090F140C76C2004DC085 /* SessionDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDetails.m; sourceTree = "<group>"; };
 		5C4C0910140C76C2004DC085 /* SessionDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionDetails.xib; sourceTree = "<group>"; };
@@ -258,6 +261,8 @@
 			children = (
 				5C7BDAE0140C44A100D68D51 /* SessionWebService.h */,
 				5C7BDAE1140C44A100D68D51 /* SessionWebService.m */,
+				5C44CC4F142E5A35007733F2 /* ConnectivityWebService.h */,
+				5C44CC50142E5A35007733F2 /* ConnectivityWebService.m */,
 			);
 			name = webservice;
 			sourceTree = "<group>";
@@ -445,6 +450,7 @@
 				5C8269F8142BE9D4002C22BB /* SessionOrganizer.m in Sources */,
 				5C7DE3F8142C1AB30028A8AA /* SessionDateTransformer.m in Sources */,
 				5C7E28A6142E505D008160D0 /* SpecialSessionIdentifier.m in Sources */,
+				5C44CC51142E5A35007733F2 /* ConnectivityWebService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -514,7 +521,8 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TEST_AFTER_BUILD = YES;
 			};
@@ -524,13 +532,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TEST_AFTER_BUILD = YES;
 			};
@@ -540,12 +550,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IowaCodeCamp/IowaCodeCamp-Prefix.pch";
 				INFOPLIST_FILE = "IowaCodeCamp/IowaCodeCamp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				"TEST_HOST[sdk=*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -555,11 +567,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IowaCodeCamp/IowaCodeCamp-Prefix.pch";
 				INFOPLIST_FILE = "IowaCodeCamp/IowaCodeCamp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

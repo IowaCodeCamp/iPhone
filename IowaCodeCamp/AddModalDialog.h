@@ -6,5 +6,6 @@
 
 + (void)buildModalDialogWithTextForView:(NSString *)text:(UIViewController *)controller;
 + (void)removeModalDialogForView:(UIViewController *)controller;
++ (void)showNoticeForNoConnectivity;
 
 @end

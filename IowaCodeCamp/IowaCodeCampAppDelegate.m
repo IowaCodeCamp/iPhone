@@ -1,5 +1,6 @@
 #import "IowaCodeCampAppDelegate.h"
 #import "IowaCodeCampViewController.h"
+#import "ConnectivityWebService.h"
 #import "SessionDetails.h"
 #import "SpeakerDetails.h"
 #import "Session.h"
@@ -23,6 +24,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     
     [window addSubview:navController.view];
     [window makeKeyAndVisible];
+    
+    ConnectivityWebService* service = [[[ConnectivityWebService alloc] initWithAppDelegate:self] autorelease];
+    [service verifyConnectivity];
+    
     return YES;
 }
 

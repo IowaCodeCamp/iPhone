@@ -55,6 +55,14 @@
     [controller.view addSubview:_hudViewx];
 }
 
++ (void)showNoticeForNoConnectivity
+{
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No network connection" message:@"This application requires some form of internet connectivity to function"  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    
+    [alert show];
+    [alert release]; 
+}
+
 - (void)dealloc {
     [super dealloc];
 }
