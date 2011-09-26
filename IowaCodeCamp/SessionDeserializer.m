@@ -21,7 +21,6 @@
         
         NSDictionary *spkr = [item objectForKey:@"speaker"];
         NSString* name = [spkr objectForKey:@"name"];
-        NSString* title = [spkr objectForKey:@"title"];
         NSString* bio = [spkr objectForKey:@"bio"];
         NSString* img = [spkr objectForKey:@"img"];
         NSString* web = [spkr objectForKey:@"web"];
@@ -29,7 +28,6 @@
         
         Speaker* speaker = [[Speaker alloc] init];
         [speaker setName:name];
-        [speaker setTitle:title];
         [speaker setBio:bio];
         [speaker setImg:img];
         [speaker setWeb:web];
