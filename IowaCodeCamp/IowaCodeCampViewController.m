@@ -14,6 +14,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @implementation IowaCodeCampViewController
 @synthesize groupIndex;
 @synthesize sessions;
+@synthesize specialSessionIdentifier;
 
 - (void)dealloc
 {
@@ -30,6 +31,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     [super viewDidLoad];
     
     [AddModalDialog buildModalDialogWithTextForView:@"loading" :self];
+    
+    specialSessionIdentifier = [[SpecialSessionIdentifier alloc] init];
     
     SessionService* service = [[SessionService alloc] initWithViewController:self];
     [service getListOfSessions];
@@ -80,10 +83,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Session* obj = [self objForIndexedGroup:indexPath];
     
-    SpecialSessionIdentifier* identifier = [[[SpecialSessionIdentifier alloc] init] autorelease];
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if ([identifier sessionNameRequiresSpecialTreatment:obj.session]) {
+    if ([specialSessionIdentifier sessionNameRequiresSpecialTreatment:obj.session]) {
         return;
     }
     
@@ -93,13 +94,12 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     Session* obj = [self objForIndexedGroup:indexPath];
-    SpecialSessionIdentifier* identifier = [[[SpecialSessionIdentifier alloc] init] autorelease];
     
-    if ([identifier sessionNameRequiresSpecialTreatment:obj.session]) {
+    if ([specialSessionIdentifier sessionNameRequiresSpecialTreatment:obj.session]) {
         return 26.0f;
     }
     
-    return 44.0f;
+    return 47.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -130,15 +130,15 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 	if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SessionDetails"] autorelease];
         
-        UIView* detailsView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 310, 99)];
+        UIView* detailsView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 310, 47)];
         
-        UILabel* sessionName = [[UILabel alloc] initWithFrame:CGRectMake(5, -5, 310, 35)];
+        UILabel* sessionName = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, 310, 32)];
         sessionName.font = [UIFont boldSystemFontOfSize:14.0];
         sessionName.tag = 16;
         [detailsView addSubview:sessionName];
         [sessionName release];
         
-        UILabel* speakerName = [[UILabel alloc] initWithFrame:CGRectMake(5, 24, 310, 15)];
+        UILabel* speakerName = [[UILabel alloc] initWithFrame:CGRectMake(5, 26, 310, 15)];
         speakerName.font = [UIFont systemFontOfSize:12.0];
         speakerName.tag = 17;
         speakerName.textColor = [UIColor grayColor];
@@ -157,6 +157,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         
         UILabel* sessionName = (UILabel*) [cell viewWithTag:16];
         sessionName.text = obj.session;
+        
+        if ([specialSessionIdentifier sessionNameRequiresSpecialTreatment:obj.session]) {
+            sessionName.frame = CGRectMake(5,0,310,26);
+        }
         
         UILabel* released = (UILabel*) [cell viewWithTag:17];
         released.text = obj.speaker.name;

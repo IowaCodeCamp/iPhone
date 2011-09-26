@@ -23,7 +23,7 @@
 
 - (void) getListOfSessions
 {
-    NSURL *url = [NSURL URLWithString:@"http://toranbillups.com/content/examples/icc.html"];
+    NSURL *url = [NSURL URLWithString:@"http://iowacodecamp.com/data/json"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
     
     [request setHTTPMethod:@"GET"];
