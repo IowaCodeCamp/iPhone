@@ -1,0 +1,672 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C1D6326140C5206008D0E91 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1D6325140C5206008D0E91 /* Session.m */; };
+		5C2A705B1420251700047F1C /* SpeakerDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A70591420251700047F1C /* SpeakerDetails.m */; };
+		5C2A705C1420251700047F1C /* SpeakerDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C2A705A1420251700047F1C /* SpeakerDetails.xib */; };
+		5C44CC51142E5A35007733F2 /* ConnectivityWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C44CC50142E5A35007733F2 /* ConnectivityWebService.m */; };
+		5C4C0911140C76C2004DC085 /* SessionDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4C090F140C76C2004DC085 /* SessionDetails.m */; };
+		5C4C0912140C76C2004DC085 /* SessionDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C4C0910140C76C2004DC085 /* SessionDetails.xib */; };
+		5C721F35140C503500641684 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C721F2C140C503500641684 /* NSObject+SBJSON.m */; };
+		5C721F36140C503500641684 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C721F2E140C503500641684 /* NSString+SBJSON.m */; };
+		5C721F37140C503500641684 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C721F30140C503500641684 /* SBJsonBase.m */; };
+		5C721F38140C503500641684 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C721F32140C503500641684 /* SBJsonParser.m */; };
+		5C721F39140C503500641684 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C721F34140C503500641684 /* SBJsonWriter.m */; };
+		5C7B78E8140C66DE00C67A07 /* SessionDeserializerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B78E7140C66DE00C67A07 /* SessionDeserializerTest.m */; };
+		5C7BDAA3140C42C300D68D51 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7BDAA2140C42C300D68D51 /* UIKit.framework */; };
+		5C7BDAA5140C42C300D68D51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7BDAA4140C42C300D68D51 /* Foundation.framework */; };
+		5C7BDAA7140C42C300D68D51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7BDAA6140C42C300D68D51 /* CoreGraphics.framework */; };
+		5C7BDAAD140C42C300D68D51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C7BDAAB140C42C300D68D51 /* InfoPlist.strings */; };
+		5C7BDAB0140C42C300D68D51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BDAAF140C42C300D68D51 /* main.m */; };
+		5C7BDAB3140C42C300D68D51 /* IowaCodeCampAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BDAB2140C42C300D68D51 /* IowaCodeCampAppDelegate.m */; };
+		5C7BDAB6140C42C300D68D51 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7BDAB4140C42C300D68D51 /* MainWindow.xib */; };
+		5C7BDAB9140C42C300D68D51 /* IowaCodeCampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BDAB8140C42C300D68D51 /* IowaCodeCampViewController.m */; };
+		5C7BDABC140C42C300D68D51 /* IowaCodeCampViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7BDABA140C42C300D68D51 /* IowaCodeCampViewController.xib */; };
+		5C7BDAC3140C42C400D68D51 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7BDAA2140C42C300D68D51 /* UIKit.framework */; };
+		5C7BDAC4140C42C400D68D51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7BDAA4140C42C300D68D51 /* Foundation.framework */; };
+		5C7BDAC5140C42C400D68D51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7BDAA6140C42C300D68D51 /* CoreGraphics.framework */; };
+		5C7BDACD140C42C400D68D51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C7BDACB140C42C400D68D51 /* InfoPlist.strings */; };
+		5C7BDAE2140C44A100D68D51 /* SessionWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BDAE1140C44A100D68D51 /* SessionWebService.m */; };
+		5C7BDAE5140C454200D68D51 /* SessionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BDAE4140C454200D68D51 /* SessionService.m */; };
+		5C7BDAE8140C4CEF00D68D51 /* SessionDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7BDAE7140C4CEF00D68D51 /* SessionDeserializer.m */; };
+		5C7DE3F8142C1AB30028A8AA /* SessionDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7DE3F7142C1AB30028A8AA /* SessionDateTransformer.m */; };
+		5C7DE7FE14309AAB00B8ACEA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C7DE7FC14309AAB00B8ACEA /* Icon.png */; };
+		5C7DE7FF14309AAB00B8ACEA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C7DE7FD14309AAB00B8ACEA /* Icon@2x.png */; };
+		5C7E28A6142E505D008160D0 /* SpecialSessionIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7E28A5142E505D008160D0 /* SpecialSessionIdentifier.m */; };
+		5C8269F8142BE9D4002C22BB /* SessionOrganizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8269F7142BE9D4002C22BB /* SessionOrganizer.m */; };
+		5C87B4F5142181C60038FF4F /* AddModalDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87B4F4142181C60038FF4F /* AddModalDialog.m */; };
+		5CF06EA614105870008FD782 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF06EA514105870008FD782 /* Speaker.m */; };
+		5CF966141410699900426298 /* AsyncImageDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF966131410699900426298 /* AsyncImageDownload.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C7BDAC6140C42C400D68D51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C7BDA95140C42C300D68D51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C7BDA9D140C42C300D68D51;
+			remoteInfo = IowaCodeCamp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C1D6324140C5206008D0E91 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		5C1D6325140C5206008D0E91 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		5C2A70581420251700047F1C /* SpeakerDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerDetails.h; sourceTree = "<group>"; };
+		5C2A70591420251700047F1C /* SpeakerDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerDetails.m; sourceTree = "<group>"; };
+		5C2A705A1420251700047F1C /* SpeakerDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerDetails.xib; sourceTree = "<group>"; };
+		5C44CC4F142E5A35007733F2 /* ConnectivityWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectivityWebService.h; sourceTree = "<group>"; };
+		5C44CC50142E5A35007733F2 /* ConnectivityWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectivityWebService.m; sourceTree = "<group>"; };
+		5C4C090E140C76C2004DC085 /* SessionDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDetails.h; sourceTree = "<group>"; };
+		5C4C090F140C76C2004DC085 /* SessionDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDetails.m; sourceTree = "<group>"; };
+		5C4C0910140C76C2004DC085 /* SessionDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionDetails.xib; sourceTree = "<group>"; };
+		5C721F2A140C503500641684 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		5C721F2B140C503500641684 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		5C721F2C140C503500641684 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		5C721F2D140C503500641684 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		5C721F2E140C503500641684 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		5C721F2F140C503500641684 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		5C721F30140C503500641684 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		5C721F31140C503500641684 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		5C721F32140C503500641684 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		5C721F33140C503500641684 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		5C721F34140C503500641684 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		5C7B78E6140C66DE00C67A07 /* SessionDeserializerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDeserializerTest.h; sourceTree = "<group>"; };
+		5C7B78E7140C66DE00C67A07 /* SessionDeserializerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDeserializerTest.m; sourceTree = "<group>"; };
+		5C7BDA9E140C42C300D68D51 /* IowaCodeCamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IowaCodeCamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7BDAA2140C42C300D68D51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5C7BDAA4140C42C300D68D51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5C7BDAA6140C42C300D68D51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5C7BDAAA140C42C300D68D51 /* IowaCodeCamp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IowaCodeCamp-Info.plist"; sourceTree = "<group>"; };
+		5C7BDAAC140C42C300D68D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5C7BDAAE140C42C300D68D51 /* IowaCodeCamp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IowaCodeCamp-Prefix.pch"; sourceTree = "<group>"; };
+		5C7BDAAF140C42C300D68D51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5C7BDAB1140C42C300D68D51 /* IowaCodeCampAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IowaCodeCampAppDelegate.h; sourceTree = "<group>"; };
+		5C7BDAB2140C42C300D68D51 /* IowaCodeCampAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IowaCodeCampAppDelegate.m; sourceTree = "<group>"; };
+		5C7BDAB5140C42C300D68D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		5C7BDAB7140C42C300D68D51 /* IowaCodeCampViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IowaCodeCampViewController.h; sourceTree = "<group>"; };
+		5C7BDAB8140C42C300D68D51 /* IowaCodeCampViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IowaCodeCampViewController.m; sourceTree = "<group>"; };
+		5C7BDABB140C42C300D68D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IowaCodeCampViewController.xib; sourceTree = "<group>"; };
+		5C7BDAC2140C42C400D68D51 /* IowaCodeCampTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IowaCodeCampTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7BDACA140C42C400D68D51 /* IowaCodeCampTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IowaCodeCampTests-Info.plist"; sourceTree = "<group>"; };
+		5C7BDACC140C42C400D68D51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5C7BDACE140C42C400D68D51 /* IowaCodeCampTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IowaCodeCampTests-Prefix.pch"; sourceTree = "<group>"; };
+		5C7BDAE0140C44A100D68D51 /* SessionWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionWebService.h; sourceTree = "<group>"; };
+		5C7BDAE1140C44A100D68D51 /* SessionWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionWebService.m; sourceTree = "<group>"; };
+		5C7BDAE3140C454200D68D51 /* SessionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionService.h; sourceTree = "<group>"; };
+		5C7BDAE4140C454200D68D51 /* SessionService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionService.m; sourceTree = "<group>"; };
+		5C7BDAE6140C4CEF00D68D51 /* SessionDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDeserializer.h; sourceTree = "<group>"; };
+		5C7BDAE7140C4CEF00D68D51 /* SessionDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDeserializer.m; sourceTree = "<group>"; };
+		5C7DE3F6142C1AB30028A8AA /* SessionDateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDateTransformer.h; sourceTree = "<group>"; };
+		5C7DE3F7142C1AB30028A8AA /* SessionDateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDateTransformer.m; sourceTree = "<group>"; };
+		5C7DE7FC14309AAB00B8ACEA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		5C7DE7FD14309AAB00B8ACEA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		5C7E28A4142E505D008160D0 /* SpecialSessionIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialSessionIdentifier.h; sourceTree = "<group>"; };
+		5C7E28A5142E505D008160D0 /* SpecialSessionIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialSessionIdentifier.m; sourceTree = "<group>"; };
+		5C8269F6142BE9D4002C22BB /* SessionOrganizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionOrganizer.h; sourceTree = "<group>"; };
+		5C8269F7142BE9D4002C22BB /* SessionOrganizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionOrganizer.m; sourceTree = "<group>"; };
+		5C87B4F3142181C60038FF4F /* AddModalDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddModalDialog.h; sourceTree = "<group>"; };
+		5C87B4F4142181C60038FF4F /* AddModalDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddModalDialog.m; sourceTree = "<group>"; };
+		5CF06EA41410586F008FD782 /* Speaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speaker.h; sourceTree = "<group>"; };
+		5CF06EA514105870008FD782 /* Speaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speaker.m; sourceTree = "<group>"; };
+		5CF966121410699900426298 /* AsyncImageDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageDownload.h; sourceTree = "<group>"; };
+		5CF966131410699900426298 /* AsyncImageDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageDownload.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C7BDA9B140C42C300D68D51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7BDAA3140C42C300D68D51 /* UIKit.framework in Frameworks */,
+				5C7BDAA5140C42C300D68D51 /* Foundation.framework in Frameworks */,
+				5C7BDAA7140C42C300D68D51 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7BDABE140C42C400D68D51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7BDAC3140C42C400D68D51 /* UIKit.framework in Frameworks */,
+				5C7BDAC4140C42C400D68D51 /* Foundation.framework in Frameworks */,
+				5C7BDAC5140C42C400D68D51 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C7B78E4140C668B00C67A07 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				5C7B78E6140C66DE00C67A07 /* SessionDeserializerTest.h */,
+				5C7B78E7140C66DE00C67A07 /* SessionDeserializerTest.m */,
+			);
+			name = entity;
+			sourceTree = "<group>";
+		};
+		5C7BDA93140C42C300D68D51 = {
+			isa = PBXGroup;
+			children = (
+				5C7BDAA8140C42C300D68D51 /* IowaCodeCamp */,
+				5C7BDAC8140C42C400D68D51 /* IowaCodeCampTests */,
+				5C7BDAA1140C42C300D68D51 /* Frameworks */,
+				5C7BDA9F140C42C300D68D51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C7BDA9F140C42C300D68D51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BDA9E140C42C300D68D51 /* IowaCodeCamp.app */,
+				5C7BDAC2140C42C400D68D51 /* IowaCodeCampTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C7BDAA1140C42C300D68D51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BDAA2140C42C300D68D51 /* UIKit.framework */,
+				5C7BDAA4140C42C300D68D51 /* Foundation.framework */,
+				5C7BDAA6140C42C300D68D51 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C7BDAA8140C42C300D68D51 /* IowaCodeCamp */ = {
+			isa = PBXGroup;
+			children = (
+				5C87B4F1142178210038FF4F /* delegate */,
+				5CF966101410698400426298 /* util */,
+				5C7BDAE9140C4EE600D68D51 /* lib */,
+				5C7BDADF140C434600D68D51 /* entity */,
+				5C7BDADE140C433C00D68D51 /* webservice */,
+				5C7BDADD140C433000D68D51 /* service */,
+				5C7BDADC140C42F200D68D51 /* views */,
+				5C7BDADB140C42D800D68D51 /* controllers */,
+				5C7BDAA9140C42C300D68D51 /* Supporting Files */,
+			);
+			path = IowaCodeCamp;
+			sourceTree = "<group>";
+		};
+		5C7BDAA9140C42C300D68D51 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C7DE7FC14309AAB00B8ACEA /* Icon.png */,
+				5C7DE7FD14309AAB00B8ACEA /* Icon@2x.png */,
+				5C7BDAAA140C42C300D68D51 /* IowaCodeCamp-Info.plist */,
+				5C7BDAAB140C42C300D68D51 /* InfoPlist.strings */,
+				5C7BDAAE140C42C300D68D51 /* IowaCodeCamp-Prefix.pch */,
+				5C7BDAAF140C42C300D68D51 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C7BDAC8140C42C400D68D51 /* IowaCodeCampTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C7B78E4140C668B00C67A07 /* entity */,
+				5C7BDAC9140C42C400D68D51 /* Supporting Files */,
+			);
+			path = IowaCodeCampTests;
+			sourceTree = "<group>";
+		};
+		5C7BDAC9140C42C400D68D51 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BDACA140C42C400D68D51 /* IowaCodeCampTests-Info.plist */,
+				5C7BDACB140C42C400D68D51 /* InfoPlist.strings */,
+				5C7BDACE140C42C400D68D51 /* IowaCodeCampTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C7BDADB140C42D800D68D51 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BDAB7140C42C300D68D51 /* IowaCodeCampViewController.h */,
+				5C7BDAB8140C42C300D68D51 /* IowaCodeCampViewController.m */,
+				5C4C090E140C76C2004DC085 /* SessionDetails.h */,
+				5C4C090F140C76C2004DC085 /* SessionDetails.m */,
+				5C2A70581420251700047F1C /* SpeakerDetails.h */,
+				5C2A70591420251700047F1C /* SpeakerDetails.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		5C7BDADC140C42F200D68D51 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				5C2A705A1420251700047F1C /* SpeakerDetails.xib */,
+				5C4C0910140C76C2004DC085 /* SessionDetails.xib */,
+				5C7BDAB4140C42C300D68D51 /* MainWindow.xib */,
+				5C7BDABA140C42C300D68D51 /* IowaCodeCampViewController.xib */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		5C7BDADD140C433000D68D51 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BDAE3140C454200D68D51 /* SessionService.h */,
+				5C7BDAE4140C454200D68D51 /* SessionService.m */,
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
+		5C7BDADE140C433C00D68D51 /* webservice */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BDAE0140C44A100D68D51 /* SessionWebService.h */,
+				5C7BDAE1140C44A100D68D51 /* SessionWebService.m */,
+				5C44CC4F142E5A35007733F2 /* ConnectivityWebService.h */,
+				5C44CC50142E5A35007733F2 /* ConnectivityWebService.m */,
+			);
+			name = webservice;
+			sourceTree = "<group>";
+		};
+		5C7BDADF140C434600D68D51 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BDAE6140C4CEF00D68D51 /* SessionDeserializer.h */,
+				5C7BDAE7140C4CEF00D68D51 /* SessionDeserializer.m */,
+				5C1D6324140C5206008D0E91 /* Session.h */,
+				5C1D6325140C5206008D0E91 /* Session.m */,
+				5CF06EA41410586F008FD782 /* Speaker.h */,
+				5CF06EA514105870008FD782 /* Speaker.m */,
+				5C8269F6142BE9D4002C22BB /* SessionOrganizer.h */,
+				5C8269F7142BE9D4002C22BB /* SessionOrganizer.m */,
+				5C7DE3F6142C1AB30028A8AA /* SessionDateTransformer.h */,
+				5C7DE3F7142C1AB30028A8AA /* SessionDateTransformer.m */,
+				5C7E28A4142E505D008160D0 /* SpecialSessionIdentifier.h */,
+				5C7E28A5142E505D008160D0 /* SpecialSessionIdentifier.m */,
+			);
+			name = entity;
+			sourceTree = "<group>";
+		};
+		5C7BDAE9140C4EE600D68D51 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				5C721F2A140C503500641684 /* JSON.h */,
+				5C721F2B140C503500641684 /* NSObject+SBJSON.h */,
+				5C721F2C140C503500641684 /* NSObject+SBJSON.m */,
+				5C721F2D140C503500641684 /* NSString+SBJSON.h */,
+				5C721F2E140C503500641684 /* NSString+SBJSON.m */,
+				5C721F2F140C503500641684 /* SBJsonBase.h */,
+				5C721F30140C503500641684 /* SBJsonBase.m */,
+				5C721F31140C503500641684 /* SBJsonParser.h */,
+				5C721F32140C503500641684 /* SBJsonParser.m */,
+				5C721F33140C503500641684 /* SBJsonWriter.h */,
+				5C721F34140C503500641684 /* SBJsonWriter.m */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		5C87B4F1142178210038FF4F /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				5C7BDAB1140C42C300D68D51 /* IowaCodeCampAppDelegate.h */,
+				5C7BDAB2140C42C300D68D51 /* IowaCodeCampAppDelegate.m */,
+			);
+			name = delegate;
+			sourceTree = "<group>";
+		};
+		5CF966101410698400426298 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				5CF966121410699900426298 /* AsyncImageDownload.h */,
+				5CF966131410699900426298 /* AsyncImageDownload.m */,
+				5C87B4F3142181C60038FF4F /* AddModalDialog.h */,
+				5C87B4F4142181C60038FF4F /* AddModalDialog.m */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C7BDA9D140C42C300D68D51 /* IowaCodeCamp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C7BDAD5140C42C400D68D51 /* Build configuration list for PBXNativeTarget "IowaCodeCamp" */;
+			buildPhases = (
+				5C7BDA9A140C42C300D68D51 /* Sources */,
+				5C7BDA9B140C42C300D68D51 /* Frameworks */,
+				5C7BDA9C140C42C300D68D51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IowaCodeCamp;
+			productName = IowaCodeCamp;
+			productReference = 5C7BDA9E140C42C300D68D51 /* IowaCodeCamp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C7BDAC1140C42C400D68D51 /* IowaCodeCampTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C7BDAD8140C42C400D68D51 /* Build configuration list for PBXNativeTarget "IowaCodeCampTests" */;
+			buildPhases = (
+				5C7BDABD140C42C400D68D51 /* Sources */,
+				5C7BDABE140C42C400D68D51 /* Frameworks */,
+				5C7BDABF140C42C400D68D51 /* Resources */,
+				5C7BDAC0140C42C400D68D51 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C7BDAC7140C42C400D68D51 /* PBXTargetDependency */,
+			);
+			name = IowaCodeCampTests;
+			productName = IowaCodeCampTests;
+			productReference = 5C7BDAC2140C42C400D68D51 /* IowaCodeCampTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C7BDA95140C42C300D68D51 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 5C7BDA98140C42C300D68D51 /* Build configuration list for PBXProject "IowaCodeCamp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5C7BDA93140C42C300D68D51;
+			productRefGroup = 5C7BDA9F140C42C300D68D51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C7BDA9D140C42C300D68D51 /* IowaCodeCamp */,
+				5C7BDAC1140C42C400D68D51 /* IowaCodeCampTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C7BDA9C140C42C300D68D51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7BDAAD140C42C300D68D51 /* InfoPlist.strings in Resources */,
+				5C7BDAB6140C42C300D68D51 /* MainWindow.xib in Resources */,
+				5C7BDABC140C42C300D68D51 /* IowaCodeCampViewController.xib in Resources */,
+				5C4C0912140C76C2004DC085 /* SessionDetails.xib in Resources */,
+				5C2A705C1420251700047F1C /* SpeakerDetails.xib in Resources */,
+				5C7DE7FE14309AAB00B8ACEA /* Icon.png in Resources */,
+				5C7DE7FF14309AAB00B8ACEA /* Icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7BDABF140C42C400D68D51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7BDACD140C42C400D68D51 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C7BDAC0140C42C400D68D51 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C7BDA9A140C42C300D68D51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7BDAB0140C42C300D68D51 /* main.m in Sources */,
+				5C7BDAB3140C42C300D68D51 /* IowaCodeCampAppDelegate.m in Sources */,
+				5C7BDAB9140C42C300D68D51 /* IowaCodeCampViewController.m in Sources */,
+				5C7BDAE2140C44A100D68D51 /* SessionWebService.m in Sources */,
+				5C7BDAE5140C454200D68D51 /* SessionService.m in Sources */,
+				5C7BDAE8140C4CEF00D68D51 /* SessionDeserializer.m in Sources */,
+				5C721F35140C503500641684 /* NSObject+SBJSON.m in Sources */,
+				5C721F36140C503500641684 /* NSString+SBJSON.m in Sources */,
+				5C721F37140C503500641684 /* SBJsonBase.m in Sources */,
+				5C721F38140C503500641684 /* SBJsonParser.m in Sources */,
+				5C721F39140C503500641684 /* SBJsonWriter.m in Sources */,
+				5C1D6326140C5206008D0E91 /* Session.m in Sources */,
+				5C4C0911140C76C2004DC085 /* SessionDetails.m in Sources */,
+				5CF06EA614105870008FD782 /* Speaker.m in Sources */,
+				5CF966141410699900426298 /* AsyncImageDownload.m in Sources */,
+				5C2A705B1420251700047F1C /* SpeakerDetails.m in Sources */,
+				5C87B4F5142181C60038FF4F /* AddModalDialog.m in Sources */,
+				5C8269F8142BE9D4002C22BB /* SessionOrganizer.m in Sources */,
+				5C7DE3F8142C1AB30028A8AA /* SessionDateTransformer.m in Sources */,
+				5C7E28A6142E505D008160D0 /* SpecialSessionIdentifier.m in Sources */,
+				5C44CC51142E5A35007733F2 /* ConnectivityWebService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7BDABD140C42C400D68D51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7B78E8140C66DE00C67A07 /* SessionDeserializerTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C7BDAC7140C42C400D68D51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C7BDA9D140C42C300D68D51 /* IowaCodeCamp */;
+			targetProxy = 5C7BDAC6140C42C400D68D51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C7BDAAB140C42C300D68D51 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C7BDAAC140C42C300D68D51 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5C7BDAB4140C42C300D68D51 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C7BDAB5140C42C300D68D51 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		5C7BDABA140C42C300D68D51 /* IowaCodeCampViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C7BDABB140C42C300D68D51 /* en */,
+			);
+			name = IowaCodeCampViewController.xib;
+			sourceTree = "<group>";
+		};
+		5C7BDACB140C42C400D68D51 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C7BDACC140C42C400D68D51 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C7BDAD3140C42C400D68D51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TEST_AFTER_BUILD = YES;
+			};
+			name = Debug;
+		};
+		5C7BDAD4140C42C400D68D51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TEST_AFTER_BUILD = YES;
+			};
+			name = Release;
+		};
+		5C7BDAD6140C42C400D68D51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IowaCodeCamp/IowaCodeCamp-Prefix.pch";
+				INFOPLIST_FILE = "IowaCodeCamp/IowaCodeCamp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"TEST_HOST[sdk=*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5C7BDAD7140C42C400D68D51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Toran Billups";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IowaCodeCamp/IowaCodeCamp-Prefix.pch";
+				INFOPLIST_FILE = "IowaCodeCamp/IowaCodeCamp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BC41638F-C5B4-488C-AB1C-0D1DC9CB2B59";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5C7BDAD9140C42C400D68D51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IowaCodeCamp.app/IowaCodeCamp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IowaCodeCampTests/IowaCodeCampTests-Prefix.pch";
+				INFOPLIST_FILE = "IowaCodeCampTests/IowaCodeCampTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5C7BDADA140C42C400D68D51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IowaCodeCamp.app/IowaCodeCamp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IowaCodeCampTests/IowaCodeCampTests-Prefix.pch";
+				INFOPLIST_FILE = "IowaCodeCampTests/IowaCodeCampTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C7BDA98140C42C300D68D51 /* Build configuration list for PBXProject "IowaCodeCamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7BDAD3140C42C400D68D51 /* Debug */,
+				5C7BDAD4140C42C400D68D51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C7BDAD5140C42C400D68D51 /* Build configuration list for PBXNativeTarget "IowaCodeCamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7BDAD6140C42C400D68D51 /* Debug */,
+				5C7BDAD7140C42C400D68D51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C7BDAD8140C42C400D68D51 /* Build configuration list for PBXNativeTarget "IowaCodeCampTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7BDAD9140C42C400D68D51 /* Debug */,
+				5C7BDADA140C42C400D68D51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C7BDA95140C42C300D68D51 /* Project object */;
+}
